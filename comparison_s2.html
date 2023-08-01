@@ -29,15 +29,15 @@
     <hr class="bar"/>
     <div class="paragraph highlight warming">如果有保險，提醒自費部分可以跟保險公司討論是否給付</div>
     <hr class="bar"/>
-    <span class="paragraph point calc_title calc_hidden">療程價格計算機 (<span class="calc_ptr1"></span>/<span
+    <span class="paragraph point calc_title calc_hidden" id="calc_title">療程價格計算機 (<span class="calc_ptr1"></span>/<span
             class="calc_ptr2"></span>)</span>
-    
+
     <div class="calculator calc_hidden" id="sn-calculator">
         <label><span class="tag">體重</span><input type="number" id="sn-weight" placeholder="例如：50 (公斤)"></label>
         <label><span class="tag">賀癌平靜脈注射</span><input type="number" id="sn-vein" placeholder="51883 (2023年本院藥價)"
-                                                  value="51883"></label>
+                                                             value="51883"></label>
         <label><span class="tag">賀癌平皮下注射</span><input type="number" id="sn-surface" placeholder="42854 (2023年本院藥價)"
-                                                  value="42854"></label>
+                                                             value="42854"></label>
         <button class="calc" onclick="calc_sn()">計算</button>
         <div class="sn-result calc_result calc_hidden">
             <span class="paragraph highlight point">賀癌平每3星期一次共18次</span>
@@ -72,18 +72,18 @@
             <hr class="bar"/>
         </div>
     </div>
-    
-    
+
+
     <div class="calculator calc_hidden" id="dn-calculator">
         <label><span class="tag">體重</span><input type="number" id="dn-weight" placeholder="例如：50 (公斤)"></label>
         <label><span class="tag">賀癌平靜脈注射</span><input type="number" id="dn-vein" placeholder="51883 (2023年本院藥價)"
-                                                  value="51883"></label>
+                                                             value="51883"></label>
         <label><span class="tag">賀癌平皮下注射</span><input type="number" id="dn-surface" placeholder="42854 (2023年本院藥價)"
                                                              value="42854"></label>
         <label><span class="tag">賀疾妥靜脈注射</span><input type="number" id="dn-hvein" placeholder="74755 (2023年本院藥價)"
-                                                  value="74755"></label>
+                                                             value="74755"></label>
         <label><span class="tag">賀雙妥皮下注射</span><input type="number" id="dn-dsurface" placeholder="93500 (2023年本院藥價)"
-                                                  value="93500"></label>
+                                                             value="93500"></label>
         <button class="calc" onclick="calc_dn()">計算</button>
         <div class="dn-result calc_result calc_hidden">
 
@@ -145,7 +145,7 @@
                 <thead class="doub_thead">
                 <tr>
                     <td>品項</td>
-                    <td><span class="description">(原價計算 無贈藥方案)</span><br>18次療程費用</td>
+                    <td>18次療程費用</td>
                     <td>每次療程費用</td>
                 </tr>
                 </thead>
@@ -164,7 +164,7 @@
     <div class="calculator calc_hidden" id="dy-calculator">
         <label><span class="tag">體重</span><input type="number" id="dy-weight" placeholder="例如：50 (公斤)"></label>
         <label><span class="tag">賀疾妥靜脈注射</span><input type="number" id="dy-hvein" placeholder="74755 (2023年本院藥價)"
-                                                  value="74755"></label>
+                                                             value="74755"></label>
         <button class="calc" onclick="calc_dy()">計算</button>
         <div class="dy-result calc_result calc_hidden">
             <span class="paragraph highlight point">賀疾妥每3星期一次共18次</span>

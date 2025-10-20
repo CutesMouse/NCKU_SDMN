@@ -51,8 +51,6 @@ function img_url(p_w, p_h) {
     if (p_w >= 0.46 && p_w <= 0.65 && p_h >= 0.44 && p_h <= 0.53) url = 'sn';
     // 雙標靶淋巴無轉移費用
     if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.44 && p_h <= 0.53) url = "dn";
-    // 雙標靶淋巴轉移費用
-    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "dy";
     if (url !== undefined) {
         show_calc(url);
         window.open(`#calc_title`, '_self');
@@ -80,13 +78,6 @@ function show_calc(mode) {
             document.querySelector('.calc_ptr2').classList.add('no_swift_color');
             document.querySelector('.calc_ptr2').innerHTML = "淋巴無轉移";
             break;
-        case "dy":
-            document.querySelector('#dy-calculator').classList.remove('calc_hidden');
-            document.querySelector('.calc_ptr1').classList.add('double_color');
-            document.querySelector('.calc_ptr1').innerHTML = "雙標靶";
-            document.querySelector('.calc_ptr2').classList.add('swift_color');
-            document.querySelector('.calc_ptr2').innerHTML = "淋巴轉移";
-            break;
     }
 }
 
@@ -112,7 +103,6 @@ function reset_result() {
 function resetCalc() {
     document.querySelector('#sn-calculator').classList.add('calc_hidden');
     document.querySelector('#dn-calculator').classList.add('calc_hidden');
-    document.querySelector('#dy-calculator').classList.add('calc_hidden');
     document.querySelector('.calc_ptr1').classList.remove('double_color');
     document.querySelector('.calc_ptr2').classList.remove('swift_color');
 }
@@ -208,20 +198,4 @@ function calc_dn() {
     document.querySelector('#dn-v3_18').innerHTML = str(v3_18);
     document.querySelector('#dn-v3_1').innerHTML = str(v3_1);
     document.querySelector('.dn-result').classList.remove('calc_hidden');
-}
-function calc_dy() {
-    reset_result();
-    let weight = document.querySelector('#dy-weight').value;
-    let hvein = document.querySelector('#dy-hvein').value;
-    if (weight === '' || hvein === '') {
-        alert('請填寫完整資料!');
-        return;
-    }
-
-    let v_18 = hvein * 18;
-    let v_1 = hvein;
-
-    document.querySelector('#dy-v_18').innerHTML = str(v_18);
-    document.querySelector('#dy-v_1').innerHTML = str(v_1);
-    document.querySelector('.dy-result').classList.remove('calc_hidden');
 }

@@ -101,6 +101,7 @@ function reset_result() {
 }
 
 function resetCalc() {
+    // remove dy
     document.querySelector('#sn-calculator').classList.add('calc_hidden');
     document.querySelector('#dn-calculator').classList.add('calc_hidden');
     document.querySelector('.calc_ptr1').classList.remove('double_color');
